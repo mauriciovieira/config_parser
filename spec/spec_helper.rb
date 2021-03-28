@@ -12,3 +12,7 @@ RSpec.configure do |config|
     c.syntax = :expect
   end
 end
+
+def path(relative)
+  Pathname.new(Dir.pwd).join(relative).to_s
+end
