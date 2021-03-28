@@ -2,6 +2,39 @@
 
 # ConfigParser
 
+This utility package reads a file in a format
+
+```
+# This is a comment, ignore it
+# All these config lines are valid
+host = test.com
+server_id=55331
+cost=2.56
+user= user
+# comment can appear here as well
+verbose =true
+test_mode = on
+debug_mode = off
+log_file_path = /tmp/logfile.log
+send_notifications = yes
+```
+
+And returns a hash such as
+
+```
+{
+  'host' => 'test.com',
+  'server_id' => 55331,
+  'cost' => 2.56,
+  'user' => 'user',
+  'verbose' => true,
+  'test_mode' => true,
+  'debug_mode' => false,
+  'log_file_path' => '/tmp/logfile.log',
+  'send_notifications' => true
+}
+```
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -31,7 +64,6 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/config_parser. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/config_parser/blob/master/CODE_OF_CONDUCT.md).
-
 
 ## License
 
