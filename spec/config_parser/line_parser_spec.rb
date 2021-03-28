@@ -8,4 +8,14 @@ RSpec.describe ConfigParser::LineParser do
       expect(subject.parse(line)).to be_nil
     end
   end
+
+  context "does not begin with number sign" do
+    context "value is a normal string" do
+      let(:line) {"host = test.com"}
+
+      it "returns key: value" do
+        expect(subject.parse(line)).to eq({"host" => "test.com"})
+      end
+    end
+  end
 end
