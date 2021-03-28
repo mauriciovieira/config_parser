@@ -1,4 +1,5 @@
 require "config_parser/file_reader"
+require "config_parser/line_parser"
 require "config_parser/version"
 
 module ConfigParser
