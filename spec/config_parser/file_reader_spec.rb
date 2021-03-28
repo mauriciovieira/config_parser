@@ -1,7 +1,7 @@
 RSpec.describe ConfigParser::FileReader do
   subject(:file_reader) { described_class.new }
 
-  describe "When file exists" do
+  context "when file exists" do
     it "opens the file" do
       file = path("spec/fixtures/config_data.txt")
 
@@ -9,7 +9,7 @@ RSpec.describe ConfigParser::FileReader do
     end
   end
 
-  describe "When file does not exist" do
+  context "when file does not exist" do
     it "raises an IOError" do
       file = path("spec/fixtures/does_not_exist.txt")
 
