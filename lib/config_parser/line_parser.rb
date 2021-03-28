@@ -19,6 +19,10 @@ class ConfigParser::LineParser
       value.to_i
     elsif value.to_f.to_s == value
       value.to_f
+    elsif /^(true|yes|on)$/.match?(value)
+      true
+    elsif /^(false|no|off)$/.match?(value)
+      false
     else
       value
     end
