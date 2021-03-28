@@ -17,5 +17,18 @@ RSpec.describe ConfigParser::LineParser do
         expect(subject.parse(line)).to eq({"host" => "test.com"})
       end
     end
+
+    context "value is a number" do
+      let(:float_line) { "cost =12.56" }
+      let(:integer_line) { "server_id = 32432" }
+
+      it "returns a parsed float" do
+        expect(subject.parse(float_line)).to eq({"cost" => 12.56})
+      end
+
+      it "returns a parsed integer" do
+        expect(subject.parse(integer_line)).to eq({"server_id" => 32432})
+      end
+    end
   end
 end
