@@ -1,7 +1,7 @@
 module ConfigParser
   class LineParser
     def parse(line)
-      return if /^#/.match?(line)
+      return {} if /^#/.match?(line)
 
       if /=/.match?(line)
         key, value = line.split(/=/, 2).map do |word|

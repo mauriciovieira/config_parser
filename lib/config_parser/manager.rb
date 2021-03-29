@@ -8,7 +8,7 @@ module ConfigParser
       config = {}
       reader = FileReader.new
       reader.read(file_path) do |line|
-        config.merge(@line_parser.parse(line))
+        config.merge!(@line_parser.parse(line))
       end
       config
     end

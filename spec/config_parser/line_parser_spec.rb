@@ -5,7 +5,7 @@ RSpec.describe ConfigParser::LineParser do
     let(:line) { "# This is a comment, ignore it" }
 
     it "is ignored" do
-      expect(subject.parse(line)).to be_nil
+      expect(subject.parse(line)).to eq({})
     end
   end
 
