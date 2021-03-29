@@ -35,31 +35,17 @@ And returns a hash such as
 }
 ```
 
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'config_parser'
-```
-
-And then execute:
-
-    $ bundle install
-
-Or install it yourself as:
-
-    $ gem install config_parser
-
-## Usage
-
-Run `exe/config_parser spec/fixtures/original_data.txt` to print the parsed hash.
-
 ## Development
+
+This code was designed as a rubygem because the scaffold generates an adequate ruby project structure. Nevertheless, this gem was not and should not be published to https://rubygems.org
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+To install this gem onto your local machine, run `bundle exec rake install`.
+
+### Usage
+
+After installing dependencies locally, run `exe/config_parser spec/fixtures/original_data.txt` to print the parsed hash.
 
 ## Contributing
 
