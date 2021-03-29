@@ -53,7 +53,7 @@ Or install it yourself as:
 
 ## Usage
 
-Run `exe/config_parser data.txt` to print the parsed hash.
+Run `exe/config_parser spec/fixtures/original_data.txt` to print the parsed hash.
 
 ## Development
 
