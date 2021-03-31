@@ -1,16 +1,15 @@
 module ConfigParser
   class LineParser
     def parse(line)
-      return {} if /^#/.match?(line)
-
       if /=/.match?(line)
         key, value = line.split(/=/, 2).map do |word|
           word.chomp.strip
         end
 
         new_value = parse_types(value)
-        {key => new_value}
+        return {key => new_value}
       end
+      {}
     end
 
     private

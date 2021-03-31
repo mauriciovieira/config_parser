@@ -1,6 +1,15 @@
 RSpec.describe ConfigParser::LineParser do
   subject(:line_parser) { described_class.new }
 
+  context "when line is not valid" do
+    let(:line) { "This is invalid, ignore it" }
+
+    it "is ignored" do
+      expect(subject.parse(line)).to eq({})
+    end
+  end
+
+
   context "when begins with number sign" do
     let(:line) { "# This is a comment, ignore it" }
 
