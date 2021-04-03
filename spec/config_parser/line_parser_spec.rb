@@ -9,7 +9,6 @@ RSpec.describe ConfigParser::LineParser do
     end
   end
 
-
   context "when begins with number sign" do
     let(:line) { "# This is a comment, ignore it" }
 
