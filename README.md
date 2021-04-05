@@ -1,4 +1,4 @@
-![Ruby](https://github.com/mauricio-doctible/config-parser//actions/workflows/ruby.yml/badge.svg)
+![Ruby](https://github.com/mauriciovieira/config-parser/actions/workflows/ruby.yml/badge.svg)
 
 # ConfigParser
 
